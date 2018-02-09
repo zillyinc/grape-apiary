@@ -49,13 +49,17 @@ module GrapeApiary
       end
 
       def generate_id
+        # HACK to avoid new ids for each blueprint generation
         case example_id_type
         when :integer
-          SecureRandom.random_number(1000)
+          # SecureRandom.random_number(1000)
+          '4598526796494069462'
         when :uuid
-          SecureRandom.uuid
+          # SecureRandom.uuid
+          '9ab8e7fe-0dce-11e8-ba89-0ed5f89f718b'
         when :bson
-          BSON::ObjectId.new.to_s
+          # BSON::ObjectId.new.to_s
+          '507f191e810c19729de860ea'
         end
       end
     end
