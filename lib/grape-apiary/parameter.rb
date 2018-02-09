@@ -55,10 +55,7 @@ module GrapeApiary
         type:           'uuid',
         desc:           "the `id` of the `#{model}`",
         documentation:  {
-          # example:      GrapeApiary::Config.generate_id
-
-          # Temporary hack to avoid random ids
-          example: model.hash.abs
+          example:      GrapeApiary::Config.generate_id
         }
       }
     end
